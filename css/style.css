@@ -1,0 +1,647 @@
+/* ==========================================================
+   RideBEL Website
+   BEL Transportation NYC LLC
+   Main Stylesheet
+   ========================================================== */
+
+
+/* ----------------------------------------------------------
+   1. Reset / Base
+   ---------------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #1f2933;
+    background-color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* ----------------------------------------------------------
+   2. Accessibility
+   ---------------------------------------------------------- */
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    z-index: 9999;
+
+    padding: 0.75rem 1rem;
+
+    background-color: #ffffff;
+    color: #000000;
+
+    border: 2px solid #000000;
+    border-radius: 4px;
+}
+
+/*
+   Keep keyboard focus visible.
+*/
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #1267d6;
+    outline-offset: 4px;
+}
+
+
+/* ----------------------------------------------------------
+   3. Coming Soon Notice
+   ---------------------------------------------------------- */
+
+.coming-soon {
+    padding: 0.7rem 1rem;
+
+    text-align: center;
+
+    background-color: #0b315c;
+    color: #ffffff;
+
+    font-size: 0.95rem;
+}
+
+.coming-soon strong {
+    font-weight: 700;
+}
+
+
+/* ----------------------------------------------------------
+   4. Header / Navigation
+   ---------------------------------------------------------- */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.navbar {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    padding: 1.25rem 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.brand {
+    display: inline-block;
+}
+
+.brand img {
+    display: block;
+    width: 210px;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    list-style: none;
+}
+
+.nav-links a {
+    color: #0b315c;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        text-decoration-color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    color: #1267d6;
+
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.35rem;
+}
+
+
+/* ----------------------------------------------------------
+   5. Hero
+   ---------------------------------------------------------- */
+
+.hero {
+    width: 100%;
+    overflow: hidden;
+
+    background-color: #f3f4f6;
+}
+
+.hero-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-height: 640px;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* ----------------------------------------------------------
+   6. General Content Layout
+   ---------------------------------------------------------- */
+
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+section {
+    scroll-margin-top: 2rem;
+}
+
+
+/* ----------------------------------------------------------
+   7. Introduction / About
+   ---------------------------------------------------------- */
+
+.intro {
+    padding: 4.5rem 0;
+    background-color: #ffffff;
+}
+
+.intro h1 {
+    margin-bottom: 0.4rem;
+
+    text-align: center;
+
+    color: #0b315c;
+
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    line-height: 1.2;
+}
+
+.subtitle {
+    margin-bottom: 3.5rem;
+
+    text-align: center;
+
+    color: #1267d6;
+
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    margin-bottom: 1.25rem;
+
+    color: #0b315c;
+
+    font-size: 1.8rem;
+    line-height: 1.3;
+}
+
+.about-content p {
+    margin-bottom: 1.25rem;
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* ----------------------------------------------------------
+   8. Mission
+   ---------------------------------------------------------- */
+
+.mission {
+    padding: 4rem 0;
+
+    background-color: #0b315c;
+    color: #ffffff;
+}
+
+.mission-content {
+    max-width: 850px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.mission-content h2 {
+    margin-bottom: 1.5rem;
+
+    color: #ffffff;
+
+    font-size: 2rem;
+}
+
+.mission-content p {
+    margin-bottom: 1rem;
+
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.mission-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Mission section - mobile */
+
+@media (max-width: 700px) {
+
+    .mission {
+        padding: 3rem 0;
+    }
+
+    .mission-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .mission-content p {
+        font-size: 1rem;
+    }
+}
+
+/* ----------------------------------------------------------
+   8. Services
+   Ready for the Services section we'll add next.
+   ---------------------------------------------------------- */
+
+.services {
+    padding: 4.5rem 0;
+
+    background-color: #f5f7fa;
+}
+
+.services h2 {
+    margin-bottom: 0.75rem;
+
+    text-align: center;
+
+    color: #0b315c;
+
+    font-size: 2rem;
+}
+
+.section-intro {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+
+    text-align: center;
+
+    color: #4b5563;
+
+    font-size: 1.05rem;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.service-card {
+    padding: 2rem;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e1e6eb;
+    border-radius: 8px;
+
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.service-card h3 {
+    margin-bottom: 0.75rem;
+
+    color: #0b315c;
+
+    font-size: 1.25rem;
+}
+
+.service-card p {
+    color: #4b5563;
+}
+
+
+/* ----------------------------------------------------------
+   9. Contact
+   ---------------------------------------------------------- */
+
+.contact {
+    padding: 4.5rem 0;
+    background-color: #ffffff;
+}
+
+.contact h2 {
+    margin-bottom: 0.75rem;
+
+    text-align: center;
+
+    color: #0b315c;
+
+    font-size: 2rem;
+}
+
+/*
+   Contact form card
+
+   The light blue background connects the form visually
+   with RideBEL's blue branding without making the form
+   too dark or difficult to read.
+*/
+
+.contact-form {
+    width: min(700px, 100%);
+    margin: 0 auto;
+
+    padding: 2.5rem;
+
+    background-color: #eef5fb;
+
+    border: 1px solid #cbdbea;
+    border-top: 5px solid #0b315c;
+    border-radius: 10px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+    text-align: left;
+}
+
+
+/* Form fields */
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 0.4rem;
+
+    color: #0b315c;
+
+    font-weight: 600;
+}
+
+
+/*
+   Give all form controls the same visual style
+   and make them fill the available width.
+*/
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 0.8rem 0.9rem;
+
+    font: inherit;
+    color: #1f2933;
+
+    background-color: #ffffff;
+
+    border: 1px solid #9ca9b5;
+    border-radius: 5px;
+}
+
+
+/*
+   Give keyboard users a clear indication of
+   which field is currently selected.
+*/
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 3px solid rgba(18, 103, 214, 0.25);
+    outline-offset: 1px;
+
+    border-color: #1267d6;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+
+/* Privacy / launch notice */
+
+.form-notice {
+    margin: 0.5rem 0 1.5rem;
+
+    color: #4b5563;
+
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+
+/* Send button */
+
+.submit-button {
+    display: block;
+
+    min-width: 180px;
+    margin: 0 auto;
+
+    padding: 0.85rem 1.5rem;
+
+    background-color: #0b315c;
+    color: #ffffff;
+
+    border: 2px solid #0b315c;
+    border-radius: 5px;
+
+    font: inherit;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.submit-button:hover,
+.submit-button:focus-visible {
+    background-color: #1267d6;
+    border-color: #1267d6;
+}
+
+
+/* Contact form mobile layout */
+
+@media (max-width: 700px) {
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+}
+
+/* ----------------------------------------------------------
+   10. Footer
+   ---------------------------------------------------------- */
+
+footer {
+    padding: 2rem 1rem;
+
+    text-align: center;
+
+    background-color: #0b315c;
+    color: #ffffff;
+
+    font-size: 0.9rem;
+}
+
+
+/* ----------------------------------------------------------
+   11. Tablet
+   ---------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        max-height: none;
+    }
+}
+
+
+/* ----------------------------------------------------------
+   12. Mobile
+   ---------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .coming-soon {
+        padding: 0.65rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+
+        padding: 1rem 0;
+
+        gap: 1rem;
+    }
+
+    .brand img {
+        width: 175px;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        justify-content: center;
+        flex-wrap: wrap;
+
+        gap: 0.75rem 1.25rem;
+    }
+
+    .nav-links a {
+        font-size: 0.95rem;
+    }
+
+    .hero-image {
+        max-height: none;
+        object-fit: contain;
+    }
+
+    .intro {
+        padding: 3rem 0;
+    }
+
+    .intro h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        margin-bottom: 2.5rem;
+
+        font-size: 1.1rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.55rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    .services,
+    .contact {
+        padding: 3rem 0;
+    }
+}
+
+
+/* ----------------------------------------------------------
+   13. Reduced Motion Accessibility
+   ---------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
