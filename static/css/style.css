@@ -645,3 +645,8 @@ footer {
         animation-iteration-count: 1 !important;
     }
 }
+.contact-trap { display: none; }
+.form-feedback, .form-errors { margin-bottom: 1.5rem; padding: 1rem; border: 1px solid currentColor; border-radius: 5px; }
+.form-feedback { color: #0b5134; background: #effaf4; }
+.form-errors, .errorlist { color: #8a1c1c; }
+.errorlist { padding-left: 1.25rem; }
