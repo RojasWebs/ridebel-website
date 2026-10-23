@@ -71,3 +71,8 @@ def home(request):
     }, status=status)
     response['Cache-Control'] = 'no-store'
     return response
+
+
+@require_http_methods(['GET', 'HEAD'])
+def privacy(request):
+    return render(request, 'privacy.html')
